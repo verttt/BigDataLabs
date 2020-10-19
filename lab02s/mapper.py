@@ -8,6 +8,7 @@ def emit(key, value):
 def map(line):
     objects = line.split('\t')
     uid, timestamp, url = objects
+	url = url.strip()
     if uid != '-' and len(url) > 0:
        emit(url, 1)
 
